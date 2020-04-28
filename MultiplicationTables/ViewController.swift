@@ -8,9 +8,15 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
     var answer = 144
+    
+    var arr: Array<[Int]> = Array()
+
+    
     @IBOutlet weak var num1: UILabel!
     
     @IBOutlet weak var num2: UILabel!
@@ -35,11 +41,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         isWrong.isHidden = true
         isCorrect.isHidden = false
         
-        let num1Val = Int.random(in: 0 ... 12)
-        let num2Val = Int.random(in: 0 ... 12)
+        
+        
+        let value1 = arr.randomElement()
+        arr = arr.filter {$0 != value1} // deletes value from array
+        print(arr)
+        let num1Val = value1![0]
+        let num2Val = value1![1]
+        
         num1.text = String(num1Val)
         num2.text = String(num2Val)
         answerValue.text = ""
+        if arr.count == 0 {
+            getArrayValues()
+        }
         
        } else {
         isWrong.isHidden = false
@@ -47,16 +62,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("Wrong")
         }
     }
+    
+    func getArrayValues() {
+        for i in 0...12 {
+            for j in 0...12 {
+                arr.append([i,j])
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-         //flashCard.layer.cornerRadius = 10
-       // flashCard.backgroundColor = UIColor.white
+        getArrayValues()
         answerValue.keyboardType = UIKeyboardType.numberPad
           
-      //  answerValue.delegate = self
         isCorrect.isHidden = true
         isWrong.isHidden = true
-        // Do any additional setup after loading the view.
+        
     }
     
 
