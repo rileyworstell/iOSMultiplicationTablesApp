@@ -23,6 +23,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var answerValue: UITextField!
     
+  
+    @IBOutlet weak var flashCard: UIView!
+   
     @IBAction func submitClicked(_ sender: Any) {
         print(answerValue.text ?? 0)
         let product = Int(num1.text!)! * Int(num2.text!)!
@@ -46,6 +49,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+         //flashCard.layer.cornerRadius = 10
+       // flashCard.backgroundColor = UIColor.white
+        answerValue.keyboardType = UIKeyboardType.numberPad
+          
       //  answerValue.delegate = self
         isCorrect.isHidden = true
         isWrong.isHidden = true

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28029A8736B6FFCEDA149854 /* Pods_MultiplicationTables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E8A1CD1F4E358B33399EAF /* Pods_MultiplicationTables.framework */; };
 		CD7D96372456292B001819A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D96362456292B001819A5 /* AppDelegate.swift */; };
 		CD7D96392456292B001819A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D96382456292B001819A5 /* SceneDelegate.swift */; };
 		CD7D963B2456292B001819A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7D963A2456292B001819A5 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21B6F2CF0BF426E8EEBD2284 /* Pods-MultiplicationTables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiplicationTables.release.xcconfig"; path = "Target Support Files/Pods-MultiplicationTables/Pods-MultiplicationTables.release.xcconfig"; sourceTree = "<group>"; };
+		46A7E42B3B903FDE509BE133 /* Pods-MultiplicationTables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiplicationTables.debug.xcconfig"; path = "Target Support Files/Pods-MultiplicationTables/Pods-MultiplicationTables.debug.xcconfig"; sourceTree = "<group>"; };
+		A4E8A1CD1F4E358B33399EAF /* Pods_MultiplicationTables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiplicationTables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7D96332456292B001819A5 /* MultiplicationTables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplicationTables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7D96362456292B001819A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7D96382456292B001819A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28029A8736B6FFCEDA149854 /* Pods_MultiplicationTables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7E1B54B1A33CB434935871B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46A7E42B3B903FDE509BE133 /* Pods-MultiplicationTables.debug.xcconfig */,
+				21B6F2CF0BF426E8EEBD2284 /* Pods-MultiplicationTables.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B7EA703F9ABA8E73B4BC29CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4E8A1CD1F4E358B33399EAF /* Pods_MultiplicationTables.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD7D962A2456292B001819A5 = {
 			isa = PBXGroup;
 			children = (
 				CD7D96352456292B001819A5 /* MultiplicationTables */,
 				CD7D96342456292B001819A5 /* Products */,
+				B7E1B54B1A33CB434935871B /* Pods */,
+				B7EA703F9ABA8E73B4BC29CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD7D96472456292C001819A5 /* Build configuration list for PBXNativeTarget "MultiplicationTables" */;
 			buildPhases = (
+				BC20F1BA70549206FF9E8846 /* [CP] Check Pods Manifest.lock */,
 				CD7D962F2456292B001819A5 /* Sources */,
 				CD7D96302456292B001819A5 /* Frameworks */,
 				CD7D96312456292B001819A5 /* Resources */,
+				046BE9B57FB00B524ECC7AF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046BE9B57FB00B524ECC7AF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiplicationTables/Pods-MultiplicationTables-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultiplicationTables/Pods-MultiplicationTables-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultiplicationTables/Pods-MultiplicationTables-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC20F1BA70549206FF9E8846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultiplicationTables-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD7D962F2456292B001819A5 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		CD7D96482456292C001819A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46A7E42B3B903FDE509BE133 /* Pods-MultiplicationTables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		CD7D96492456292C001819A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21B6F2CF0BF426E8EEBD2284 /* Pods-MultiplicationTables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
